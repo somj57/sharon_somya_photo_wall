@@ -52,7 +52,7 @@ async function loadImages(batchCount = 1) {
 function loadThumbnail(index) {
     return new Promise((resolve) => {
         const thumbImg = new Image();
-        thumbImg.crossOrigin = 'Anonymous';
+        // thumbImg.crossOrigin = 'Anonymous';
         thumbImg.src = `images/thumbs/${index}.jpg`;
 
         thumbImg.onload = function () {
@@ -118,7 +118,7 @@ function showPopup(src, date, index) {
     imgDate.innerText = '';
 
     const fullImg = new Image();
-    fullImg.crossOrigin = 'Anonymous';
+    // fullImg.crossOrigin = 'Anonymous';
     fullImg.src = src;
 
     fullImg.onload = function () {
