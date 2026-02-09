@@ -10,15 +10,15 @@ let leftArrow;
 let rightArrow;
 
 // Calculate the number of days since the start date
-function calculateLoveDays() {
-    const startDate = new Date('2020-01-01'); // **Love date**
-    const today = new Date();
-    startDate.setHours(0, 0, 0, 0);
-    today.setHours(0, 0, 0, 0);
-    const timeDiff = today - startDate;
-    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    document.getElementById('loveDays').innerText = days;
-}
+// function calculateLoveDays() {
+//     const startDate = new Date('2020-01-01'); // **Love date**
+//     const today = new Date();
+//     startDate.setHours(0, 0, 0, 0);
+//     today.setHours(0, 0, 0, 0);
+//     const timeDiff = today - startDate;
+//     const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+//     document.getElementById('loveDays').innerText = days;
+// }
 
 // Load images in batches when the user scrolls to the bottom of the page
 async function loadImages(batchCount = 1) {
@@ -213,7 +213,7 @@ window.addEventListener('keydown', function (event) {
 
 // Load the initial images and set up event listeners
 window.onload = function () {
-    calculateLoveDays();
+    // calculateLoveDays();
 
     loadImages(initialBatchCount).then(() => {
         window.addEventListener('scroll', handleScroll);
